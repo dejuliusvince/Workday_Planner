@@ -42,11 +42,11 @@ $(document).ready(() => {
     $("#9save").on('click', () => {
         localStorage.setItem("9am", $('#9').val())
     })
-    
+
     $("#9").val(localStorage.getItem('9am'))
     
 
-    $("#9save").on('click', () => {
+    $("#10save").on('click', () => {
         localStorage.setItem("9am", $('#9').val())
     })
 })
