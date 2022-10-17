@@ -5,17 +5,48 @@
 
 //Step 4: grab the textarea value and store it in local storage
 
+const hoursArr = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 
-var timeBlocksArr=[9,10,11,12,13,14,15,16,17]
-var currentHour = moment().hour()
-var currentDay =$("#currentDay") // document.querySelector(#currentDay)
-console.log(currentHour)
+let currentHour = moment().hour()
 
+let currentDay = $("#currentDay")
+let systemTime = moment().format("dddd, MMMM Do")
 
-var systemTime=moment(format("dddd, MMMM, Do"))
-currentDay.text(systemTime)  // currentDay.textContent=moment()
+currentDay.text(systemTime)
 
-function displayTimeBlockColors(){
-    for(var i=0; i < timeBlocksArr.length;i++)
-    
+const displayTimeBlockColors = () => {
+    for (let i = 0; i < hoursArr.length; i++) {
+
+        let currentTextEl = $("#" + hoursArr[i])
+
+        if (currentHour > hoursArr[i]) {
+
+            currentTextEl.addClass("past")
+        }
+        else if (currentHour === hoursArr[i]) {
+            currentTextEl.addClass("present")
+        }
+        else {
+            currentTextEl.addClass("future")
+        }
+    }
 }
+
+displayTimeBlockColors()
+
+$(document).ready(() => {
+
+    $("#9").val(localStorage.getItem('9am'))
+    
+
+    $("#9save").on('click', () => {
+        localStorage.setItem("9am", $('#9').val())
+    })
+    
+    $("#9").val(localStorage.getItem('9am'))
+    
+
+    $("#9save").on('click', () => {
+        localStorage.setItem("9am", $('#9').val())
+    })
+})
