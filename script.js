@@ -43,10 +43,59 @@ $(document).ready(() => {
         localStorage.setItem("9am", $('#9').val())
     })
 
-    $("#9").val(localStorage.getItem('9am'))
+    $("#10").val(localStorage.getItem('10am'))
     
 
     $("#10save").on('click', () => {
-        localStorage.setItem("9am", $('#9').val())
+        localStorage.setItem("10am", $('#10').val())
+    })
+
+    $("#11").val(localStorage.getItem('11am'))
+    
+
+    $("#11save").on('click', () => {
+        localStorage.setItem("11am", $('#11').val())
+    })
+
+    $("#12").val(localStorage.getItem('12am'))
+    
+
+    $("#12save").on('click', () => {
+        localStorage.setItem("12am", $('#12').val())
+    })
+
+    $("#13").val(localStorage.getItem('1pm'))
+    
+
+    $("#13save").on('click', () => {
+        localStorage.setItem("1pm", $('#13').val())
+    })
+
+    $("#14").val(localStorage.getItem('2pm'))
+    
+
+    $("#14save").on('click', () => {
+        localStorage.setItem("2pm", $('#14').val())
+    })
+
+    $("#15").val(localStorage.getItem('3pm'))
+    
+
+    $("#15save").on('click', () => {
+        localStorage.setItem("3pm", $('#15').val())
+    })
+
+    $("#16").val(localStorage.getItem('4pm'))
+    
+
+    $("#16save").on('click', () => {
+        localStorage.setItem("4pm", $('#16').val())
+    })
+
+    $("#17").val(localStorage.getItem('5pm'))
+    
+
+    $("#17save").on('click', () => {
+        localStorage.setItem("5pm", $('#17').val())
     })
 })
