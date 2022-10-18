@@ -1,9 +1,9 @@
 //Step 1: put current date on the webapge using moment() 
 //Step 2: compare the current hour with time-blocks
-//Step 3: Translate time-blocks to military time
+//Step 3: Translate time-blocks to military time using number array
 //Step 4: use the css classes for present, past or future
 
-//Step 4: grab the textarea value and store it in local storage
+//Step 5: grab the textarea value and store it in local storage, display inside input field persistently
 
 const hoursArr = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 
@@ -14,6 +14,7 @@ let systemTime = moment().format("dddd, MMMM Do")
 
 currentDay.text(systemTime)
 
+//iterate through hours array, applying class based on current time of day
 const displayTimeBlockColors = () => {
     for (let i = 0; i < hoursArr.length; i++) {
 
@@ -32,7 +33,11 @@ const displayTimeBlockColors = () => {
     }
 }
 
+
+//Call function to render the color-coding for time slots.
 displayTimeBlockColors()
+
+//Each individual button will have logic to save the input from it's corresponding text field into local storage, and will persistently load the values on the page when refreshed. 
 
 $(document).ready(() => {
 
