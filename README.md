@@ -10,7 +10,7 @@ Below is a screenshot demonstrating the app's functionality.
 ![Screenshot of app with time slots color coded](./workday_planner_screenshot.png)
 
 ## Links to Application/Repo
-link to deployed application: <br />
+link to deployed application: https://dejuliusvince.github.io/Workday_Planner/ <br />
 link to GitHub repository: https://github.com/dejuliusvince/Workday_Planner
 
 
